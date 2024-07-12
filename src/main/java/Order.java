@@ -1,8 +1,17 @@
-import lombok.Data;
 
-@Data
 public class Order {
 
-    private int id;
-    private double amount;
+    private final int id;
+    private final double amount;
+    public Order(int id, double amount) {
+        this.id = id;
+        this.amount = amount;
+    }
+
+    public double getAmount() {
+        return this.amount;
+    }
+    public int getId() {
+        return this.id;
+    }
 }
